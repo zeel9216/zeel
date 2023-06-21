@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo background video</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .fullscreen_bg{
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: -1;
+            background-size: cover;
+
+        }
+        .fullscreen_bg_video{
+            position: fixed;
+            width: auto;
+            height: auto;
+            min-height: 100%;
+            min-width: 100%;
+        }
+        h1{
+            background-color: blue;
+            color: #fff;
+        }
+        nav{
+            
+            background-color:burlywood;
+        }
+        ul{
+            margin: 0;
+        }
+        nav ul li{
+            display: inline-flex;
+            margin: 10px;
+            padding: 20px;
+           
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="fullscreen_bg">
+        <video src="mov_bbb.mp4" autoplay loop muted class="fullscreen_bg_video"></video>
+    </div>
+
+    <nav>
+        <ul>
+            <li>book</li>
+            <li>novel</li>
+            <li>Texbook</li>
+            <li>Workbook</li>
+        </ul>
+    </nav>
+
+    <h1>Hello student</h1>
+    <h1>Hello student</h1>
+    <h1>Hello student</h1>
+    <h1>Hello student</h1>
+</body>
+</html>
