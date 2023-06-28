@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo js</title>
+    <script src="demojs.js"></script>
+    
+</head>
+<body>
+    <button type="button" onclick="alert('hello guys')">Alert</button>
+    <button type="button" onclick="confirm('hii')">Confirm</button>
+    <button type="button" onclick="prompt('what is your name')">Prompt</button>
+
+    <hr>
+
+    <button type="button" onclick="alertinternal()">Alert</button>
+    <button type="button" onclick="confirminternal()">Confirm</button>
+    <button type="button" onclick="promptinternal()">Prompt</button>
+
+    <hr>
+
+    <button type="button" onclick="alertExternal()" id="b1">Alert</button>
+    <button type="button" onclick="confirmExternal()" id="b2">Confirm</button>
+    <button type="button" onclick="promptExternal()" id="b3">Prompt</button>
+
+    <button type="button" onclick="bodybggreen()">Bodybggreen</button>
+    <button type="button" onclick="divbggray()">Divbggray</button>
+    <div id="div1" style="width: 200px; height: 200px;"></div>
+
+    <button type="button" onclick="bodybg()">Bodybg</button>
+    <button type="button" onclick="divbgb()">Divbg</button>
+    <div id="div2" style="width: 200px; height: 200px;"></div>
+
+    <input type="color" onchange="bodybgcolor()" id="c1">
+    <input type="color" onchange="divbgcolor()" id="c2">
+
+
+
+<script>
+    function alertinternal(){
+        alert ("How are you?")
+    }
+    function confirminternal(){
+        confirm("Enter ans")
+        if(confirm){
+            alert ("Fine")
+        }
+        else{
+            alert ("error")
+        }      
+    }
+    function promptinternal(){
+        let fname=prompt("Enter First name")
+        let lname=prompt("Enter Last name")
+        document.write(fname+" "+lname)
+    }
+
+    function bodybggreen(){
+        document.body.style.backgroundColor="green"
+    }
+    function divbggray(){
+        document.getElementById("div1").style.backgroundColor="gray"
+    }
+    function bodybg(){
+        document.body.style.backgroundColor=prompt("enter color")
+    }
+    function divbg(){
+        document.getElementById("div2").style.backgroundColor=prompt("enter color")
+    }
+
+    function bodybgcolor(){
+        document.body.style.backgroundColor=document.getElementById("c1").value
+    }
+    function divbgcolor(){
+        document.getElementById("div2").style.backgroundColor=document.getElementById("c2").value
+    }
+</script>
+</body>
+</html>
