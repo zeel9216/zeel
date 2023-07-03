@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movable</title>
+    <style>
+        #draggable ,#draggable1 ,#draggable2 ,#draggable3 ,#draggable4 ,#draggable5{
+            width: 150px;
+            height: 150px;
+            padding: 1em;
+            background: crimson;
+            color: white;
+        }
+        #draggable1{
+            width: 500px;
+        }
+        #draggable1 h3{
+            display: inline-block;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="draggable" class="ui-widget-content">
+        <h3>I Can Move All Arouund</h3>
+    </div>
+
+    <hr>
+
+    <div id="draggable1" class="ui-widget-content">
+        <h3>I Can Move Horizontal</h3>
+    </div>
+
+    <hr>
+
+    <div id="draggable2" class="ui-widget-content">
+        <h3>I Can Move Vertical</h3>
+    </div>
+
+    <hr>
+
+    <div id="draggable3" class="ui-widget-content">
+        <h3>I Can Move 3 second delay</h3>
+    </div>
+
+    <hr>
+
+    <div id="draggable4" class="ui-widget-content">
+        <h3>I Can 200px move</h3>
+    </div>
+
+    <hr>
+
+    <div id="draggable5" class="ui-widget-content">
+        <h3>I Can move zoom in & out</h3>
+    </div>
+    <div class="container" style="height: 500px;width: 500px;"></div>
+
+
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+
+    <script>
+        $(function () {
+            $("#draggable").draggable();
+            
+            $("#draggable1 h3").draggable ({
+                axis : "x",
+                containment:"#draggable1"
+            });
+            $("#draggable2 h3").draggable ({
+                containment:"#draggable2",
+                axis : "y"
+            });
+            $("#draggable3 ").draggable ({
+                delay:3000
+            });
+            $("#draggable4 ").draggable ({
+                distance:200
+            });
+            $("#draggable5 ").resizable ({
+                
+            });
+
+        });  
+    </script>
+</body>
+
+</html>
